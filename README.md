@@ -139,8 +139,9 @@ DimPlot(seuratObject, reduction = "umap", label = TRUE)
 
 VlnPlot(seuratObject, features = c("tdTomato-all","Krt19","Sox9","Spp1","Muc1","Ins1","Ucn3","Pdx1","Mnx1","Mafa","Nkx6-1","Sst","Hhex","Gcg","Ppy","Hes1","Ins2","Nkx2-2","Pax6"), pt.size = 0.1)
 ![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/2df7ad27-e069-4682-bd9c-bee7742920f2)
-VlnPlot(seuratObject, features = c("Cd14","Mrc1","Vim","Cldn4","Prrx1","Ctrb1","Pecam1","Cpa1"), pt.size = 0.1)
-![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/bfee894b-0024-46a8-92f1-de29c3efc195)
+VlnPlot(seuratObject, features = c("Cd14","Mrc1","Vim","Cldn4","Prrx1","Ctrb1","Pecam1","Epcam","Cpa1"), pt.size = 0.1)
+![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/3ea78eb3-9ec5-427b-ad9c-cb0cc295c143)
+
 
 #the plot below need to be revised -- 
 VlnPlot(seuratObject, features = c("tdTomato-all","Krt19","Sox9","Spp1","Muc1","Ins1","Ucn3","Pdx1","Mnx1","Mafa","Nkx6-1","Sst","Hhex","Gcg","Ppy","Hes1","Ins2","Nkx2-2","Pax6"), group.by = "orig.ident", pt.size = 0.1)
