@@ -119,3 +119,6 @@ DimPlot(seuratObject, reduction = "umap")
 
 VlnPlot(seuratObject, features = c("tdTomato-all","Krt19","Sox9","Spp1","Muc1","Ins1","Ucn3","Pdx1","Mnx1","Mafa","Nkx6-1","Sst","Hhex","Gcg","Ppy","Hes1","Ins2","Nkx2-2","Pax6"), pt.size = 0.1)
 ![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/59427775-f199-4bb3-8f3e-31801a5b6807)
+VlnPlot(seuratObject, features = c("Cd14","Cd3e","Cd19","Ghrl","Cd14","Mrc1","Vim","Acta2","Fap","Cldn4","Prrx1","Ctrb1","Pecam1","Epcam","Cpa1"), pt.size = 0.1)
+![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/358821b0-fb8d-481e-9142-5ba5402034e6)
+
