@@ -121,4 +121,20 @@ VlnPlot(seuratObject, features = c("tdTomato-all","Krt19","Sox9","Spp1","Muc1","
 ![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/59427775-f199-4bb3-8f3e-31801a5b6807)
 VlnPlot(seuratObject, features = c("Cd14","Cd3e","Cd19","Ghrl","Cd14","Mrc1","Vim","Acta2","Fap","Cldn4","Prrx1","Ctrb1","Pecam1","Epcam","Cpa1"), pt.size = 0.1)
 ![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/358821b0-fb8d-481e-9142-5ba5402034e6)
+#Alpha cell markers plot
+VlnPlot(seuratObject, features = c("Gcg", "Irx1", "Irx2", "Mafb", "Arx"), pt.size = 0.1)
+![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/3bda9d72-74ae-48db-a7f6-0aac38cdd48f)
+VlnPlot(seuratObject, features = c("Ins1", "Ins2", "G6pc2", "Ucn3", "Mafa", "Slc2a2", "Pcsk1", "Nkx6-1", "Pcsk2", "Pdx1", "Iapp", "Krt19", "Syn2", "Glp1r", "Mnx1"), pt.size = 0.1)
+![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/01d1ac46-3664-4434-8047-d00d29bc491b)
+VlnPlot(seuratObject, features = c("Ppy", "Pyy", "Ace2", "Isl1", "Glis3", "Myt1", "Neurog3", "Neurod1", "Nkx2-2", "Pax6", "Chga", "Rfx6"), pt.size = 0.1)
+![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/dd543bdf-0b59-4050-977e-7f86b5ca3a05)
+#DUCT/EMT
+VlnPlot(seuratObject, features = c("Vim", "Cldn4", "Anxa2", "Id1", "Prrx1", "Prdm16", "Hes1", "Prom1", "Sox9", "Onecut2", "Muc1", "Spp1", "Krt19"), pt.size = 0.1)
+![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/36066003-c14a-4619-a985-461a27e231eb)
+
+
+
+
+
+
 
