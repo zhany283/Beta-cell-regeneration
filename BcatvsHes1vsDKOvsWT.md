@@ -133,6 +133,51 @@ VlnPlot(seuratObject, features = c("Vim", "Cldn4", "Anxa2", "Id1", "Prrx1", "Prd
 ![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/36066003-c14a-4619-a985-461a27e231eb)
 
 
+genes_of_interest <- c("tdTomato-all","Krt19","Sox9","Spp1","Muc1","Ins1","Ucn3","Pdx1","Mnx1","Mafa","Nkx6-1","Sst","Hhex","Gcg","Ppy","Hes1","Ins2","Nkx2-2","Pax6") 
+# Calculate average expression for each condition by averaging across the desired samples
+avg_expression_list <- list(
+  WT = rowMeans(cbind(seuratObject@assays$RNA@layers$counts.WT_1, 
+                      seuratObject@assays$RNA@layers$counts.WT_2)),
+  bcatKO = rowMeans(cbind(seuratObject@assays$RNA@layers$counts.bCatenin_KO_1, 
+                          seuratObject@assays$RNA@layers$counts.bCatenin_KO_2)),
+  hes1KO = rowMeans(cbind(seuratObject@assays$RNA@layers$counts.Hes1_KO1, 
+                          seuratObject@assays$RNA@layers$counts.Hes1_KO2)),
+  doubleKO = rowMeans(cbind(seuratObject@assays$RNA@layers$counts.DKO_1, 
+                            seuratObject@assays$RNA@layers$counts.DKO_2))
+)
+
+conditions <- c(rep("WT", ncol(seuratObject@assays$RNA@layers$counts.WT_1) + ncol(seuratObject@assays$RNA@layers$counts.WT_2)),
+                rep("bcatKO", ncol(seuratObject@assays$RNA@layers$counts.bCatenin_KO_1) + ncol(seuratObject@assays$RNA@layers$counts.bCatenin_KO_2)),
+                rep("hes1KO", ncol(seuratObject@assays$RNA@layers$counts.Hes1_KO1) + ncol(seuratObject@assays$RNA@layers$counts.Hes1_KO2)),
+                rep("doubleKO", ncol(seuratObject@assays$RNA@layers$counts.DKO_1) + ncol(seuratObject@assays$RNA@layers$counts.DKO_2)))
+
+seuratObject$condition <- conditions
+
+# Dot plot using the condition metadata column for grouping
+dotplot <- DotPlot(seuratObject, features = genes_of_interest, group.by = "condition") +
+  scale_color_gradient2(low = "blue", high = "red", mid = "white", midpoint = 0.5, 
+                        limit = c(0, 1), space = "Lab", na.value = "grey50") +
+  theme_minimal() +
+  theme(
+    legend.position = "right",
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+# Print the plot
+dotplot
+![image](https://github.com/zhany283/Beta-cell-regeneration/assets/130387837/9ae11468-8d66-4684-af2e-21281d4181ef)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
