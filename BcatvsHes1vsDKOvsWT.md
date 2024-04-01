@@ -4,7 +4,7 @@ library(ggplot2)
 library(dplyr)
 library(Matrix)
 library(SeuratObject)
-
+#remember to add R version information !!!!!!!!!!!!!!!!
 setwd("C:\\Users\\ethan\\Desktop\\solomon_scRNA-Seq\\")
 
 bCatenin_KO_1 <- Read10X(data.dir = "bCatenin_KO_1/filtered_feature_bc_matrix")
